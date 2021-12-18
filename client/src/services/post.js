@@ -1,7 +1,7 @@
 import api from './api-config';
 
 export const createPost = async (user_id, data) => {
-  const resp = await api.post(`/users/${user_id}/posts`, { topic: data })
+  const resp = await api.post(`/users/${user_id}/posts`, { post: data })
   console.log(resp)
   return resp.data
 }
@@ -17,7 +17,7 @@ export const readOnePost = async (id) => {
 }
 
 export const updatePost = async (user_id, id, data) => {
-  const resp = await api.put(`users/${user_id}/posts/${id}`, { topic: data })
+  const resp = await api.put(`users/${user_id}/posts/${id}`, { post: data })
   return resp.data
 }
 
